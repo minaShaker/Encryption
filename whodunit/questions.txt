@@ -1,0 +1,19 @@
+1.  it's a header file wich allows us to use and manipulate integers much better ,
+some of the variables defined in it is int8_t which equals to 1 byte or char uint8_t this is unsigned int , we can increase the size until we reach 64 bits = 8 bytes 
+2.  uint8_t decide what is the size of the int variable despite the compiler so uint_8 equals exacley 8 bits 1 byte and it's unsigned , which mean 
+it can hold bigger positive numbers so we are creating this deftype to be able to hold on the data from header of bmp 
+we use it int_8 or uint_8 to control the exact size we are gonna use and not making the compiler decide for us  , we use uint_8 for bigger positive numbers
+3.  BYTE =1 byte, a DWORD = 4 bytes, a LONG = 4 bytes, and a WORD = 2 bytes
+4.  42 4D
+5.  bfsize is the size of the file (all of it) the size of the image + the badding + the 2 header files 
+bisize is the size of the structure of BITMAPINFOHEADER which is 40
+6.  biHight is negative means that the start of the picture is from the top left means from high to bottom
+7.  biBitCount
+8.  in line 24 the mode 'r' the file might be not excist or it's open by another file , or no permission to read this file , the file could be write only
+in line 32 the mode is 'w' the file might be open by another program or there is no space to create new file , or no permission to make new file the file could be read only
+9.  because the thirs argument from fread is how many times to read , so we make it 1 cause we want to read only once 
+10. 3
+11. if i want to change the offset of the pointer to make it point to somewhere else 
+12. when we use fseek() if we put seek_cur it will change the pointer position in relation to the current position of the file pointer
+which means if we write fseek (filepointer , number of bytes you want to change the position to(offset) , the place from which you want ot start counting (whence))
+so if we put seek_cur it will start counting from where we stand 
